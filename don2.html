@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>결제하기</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB6sVlL035ChFfWnkXe0zP_mwo7ACiFcwo",
+            authDomain: "hs-food-fighter.firebaseapp.com",
+            databaseURL: "https://hs-food-fighter.firebaseio.com",
+            projectId: "hs-food-fighter",
+            storageBucket: "hs-food-fighter.appspot.com",
+            messagingSenderId: "577796515280"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">신용카드 결제 서비스</a>
+            
+              
+           
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+         <br>
+         <br>
+         <br>
+         
+        <h4>-주문정보</h4>
+        <tr align='center'>
+            <td>
+                <table width='538' bgcolor='#DBDBDB' border='1' cellspacing='1' cellpadding='0'>
+
+                    <tr height='30' valign='middle'>
+                        <td width='100' height='35' bgcolor='#E2EBF2'>
+                            <font color='#000000' size='2pt'>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;상품명
+                            </font>
+                        </td>
+                        <td width='438' bgcolor='#ffffff'>
+                            &nbsp;&nbsp;돈까스
+                            <font color='#000000' size='2pt'>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                               
+
+                            </font>
+                        </td>
+                    </tr>
+
+
+                    <tr height='30' valign='middle'>
+                        <td width='100' height='35' bgcolor='#E2EBF2'>
+                            <font color='#000000' size='2pt'>
+                                &nbsp;&nbsp;&nbsp;&nbsp; 고객명
+                            </font>
+                        </td>
+                        <td width='438' bgcolor='#ffffff'>
+                            &nbsp;&nbsp;
+                            <input type="text" name="name" id="purchaseName" size="5" height="2">
+                            <font color='#000000' size='2pt'>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type=hidden id="customer_name" name="customer_name" value=''>
+
+                            </font>
+                        </td>
+                    </tr>
+
+                    <tr height='24' valign='middle'>
+                        <td width='100' bgcolor='#E2EBF2'>
+                            <font color='#000000' size='2pt'>
+                                &nbsp;&nbsp;&nbsp;&nbsp; 결제금액
+                            </font>
+                        </td>
+                        <td width='438' bgcolor='#ffffff'>
+                            &nbsp;&nbsp;
+                            3000원
+                            <font color='#000000' size='2pt'>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="hidden" name="payment_money" value='0' class=input readOnly>
+
+
+                            </font>
+                        </td>
+                    </tr>
+
+            </td>
+        </tr>
+
+
+
+
+        <tr height='25' valign='middle'>
+            <td width='100' bgcolor='#E2EBF2'>
+                <font color='#000000' size='2pt'>
+                    &nbsp;&nbsp;&nbsp;&nbsp; 신용카드
+                </font>
+            </td>
+            <td width='438' bgcolor='#FAFAFA'>
+                <font color='#000000' size='2pt'>
+                    &nbsp;&nbsp;
+                    <select name='card_code' onChange='checkHandler(value)'>
+                        <option value='00' selected>-- 선택하세요 --</option>
+
+                        <option value='01'>BC카드</option>
+                        <option value='02'>국민카드</option>
+                        <option value='KA'>카카오뱅크카드</option>
+                        <option value='03'>하나(구.외환)카드</option>
+                        <option value='04'>삼성카드</option>
+
+                        <option value='08'>현대카드</option>
+
+                        <option value='09'>롯데카드</option>
+                        <option value='11'>씨티카드</option>
+                        <option value='12'>수협카드</option>
+                        <option value='15'>농협카드</option>
+                        <option value='24'>하나(구.하나SK)카드</option>
+
+                        <option value='10'>신한카드</option>
+                        <option value='17'>광주카드</option>
+                        <option value='18'>전북카드</option>
+                        <option value='16'>제주카드</option>
+
+                    </select>
+                </font>
+            </td>
+        </tr>
+
+        <tr height='30' valign='middle'>
+            <td width='100' height='35' bgcolor='#E2EBF2'>
+                <font color='#000000' size='2pt'>
+                    &nbsp;&nbsp;&nbsp;&nbsp; 신용카드번호
+                </font>
+            </td>
+            <td width='438' bgcolor='#ffffff'>
+                &nbsp;&nbsp;
+                <input type="text" name="name" size="5" height="2"> -
+                <input type="text" name="name" size="5" height="2"> -
+                <input type="text" name="name" size="5" height="2"> -
+                <input type="text" name="name" size="5" height="2">
+                <font color='#000000' size='2pt'>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type=hidden name="customer_name" value=''>
+
+                </font>
+            </td>
+        </tr>
+
+        <tr height='30' valign='middle'>
+            <td width='100' height='35' bgcolor='#E2EBF2'>
+                <font color='#000000' size='2pt'>
+                    &nbsp;&nbsp;&nbsp;&nbsp; 전화번호
+                </font>
+            </td>
+            <td width='438' bgcolor='#ffffff'>
+                &nbsp;&nbsp;
+                <input type="text" name="name" size="5" height="2"> -
+                <input type="text" name="name" size="5" height="2"> -
+                <input type="text" name="name" size="5" height="2">
+                <font color='#000000' size='2pt'>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type=hidden name="customer_name" value=''>
+
+                </font>
+            </td>
+        </tr>
+
+        </table>
+        <br>
+
+        <form style="display: hidden" action="lovely-dream.glitch.me/" method="POST" id="form">
+            <button id="click" type="button" class="btn btn-secondary" onclick="history.back()"/>취소하기</button>
+            <!-- <button type="button" class="btn btn-primary" id="btnPurchase" onClick="location.href='receipt.html'" />결재하기</button> -->
+            <button type="button" class="btn btn-primary" id="btnPurchase" onClick="" />결재하기</button>
+              
+        </form>
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <!-- <footer class="py-5 bg-dark">
+        <div class="container">
+
+        </div>
+    </footer>  -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    <script src="js/firebase.js"></script>
+    <!-- <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+
+</body>
+
+</html>
