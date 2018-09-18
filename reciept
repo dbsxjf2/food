@@ -64,10 +64,14 @@
 
 
 
-  var result = Math.floor(Math.random() * 10000) + 1;
+ // var result = Math.floor(Math.random() * 10000) + 1;
+
+  //document.write(result);
+ var result = "A - 100";
 
   document.write(result);
-
+  
+   result++;
 
 
 </script><br>
