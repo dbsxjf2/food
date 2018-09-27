@@ -1,0 +1,108 @@
+    }
+     }
+     </script>
+      
+</head>
+     <script language="javascript">
+        var sell_price;
+        var amount;
+        
+        function init () {
+            sell_price = document.form.sell_price.value;
+            amount = document.form.amount.value;
+            document.form.sum.value = sell_price;
+            change();
+        }
+        
+        function add () {
+            hm = document.form.amount;
+            sum = document.form.sum;
+            hm.value ++ ;
+        
+            sum.value = parseInt(hm.value) * sell_price;
+        }
+        
+        function del () {
+            hm = document.form.amount;
+            sum = document.form.sum;
+                if (hm.value > 1) {
+                    hm.value -- ;
+                    sum.value = parseInt(hm.value) * sell_price;
+                }
+        }
+        
+        function change () {
+            hm = document.form.amount;
+            sum = document.form.sum;
+        
+                if (hm.value < 0) {
+                    hm.value = 0;
+                }
+            sum.value = parseInt(hm.value) * sell_price;
+        }  
+    </script>
+</head>
+ <body>
+<body onload="init();">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+@@ -96,7 +129,7 @@
+        <!-- Jumbotron Header -->
+        <br>
+        <div class="page-header">
+            <h1 class = "display-3">Order Information</h1>
+            <h1 class = "display-4">Order Information</h1>
+    </div>
+        <br>
+        <tr align='center'>
+@@ -108,33 +141,44 @@ <h1 class = "display-3">Order Information</h1>
+                            <input type="text" class="form-control onlyAlphabetAndNumber" id="id" data-rule-required="true" maxlength="30" placeholder="자동으로 메뉴 가지고와야할 곳">
+                        </div>
+                    </div>
+                    <br>
+                     
+                    <div class="form-group" id="divPassword">
+                        <label for="inputPassword" class="col-lg-2 control-label"><strong>수량</strong></label>
+                        <div class="col-lg-3">
+                            <select class="form-control" width="100" name='food' onChange='num(value)' autofocus>
+                        <form name="form" method="get">
+                            <label for="inputPassword" class="col-lg-2 control-label"><strong>수량</strong></label>
+                                <div class="col-lg-3">
+                            <!-- <select class="form-control" width="100" name='food' onChange='num(value)' autofocus>
+                                    <option value='1' selected>1</option>
+                                    <option value='2'>2</option>
+                                    <option value='3'>3</option>
+                                    <option value='4'>4</option>
+                                    <option value='4'>5</option>
+                                    <option value='4'>6</option>
+                                    <option value='4'>6</option>    
+                                    <option value='4'>7</option>
+                                    <option value='4'>8</option>
+                            </select>
+                            </select> -->
+                                     <input type=hidden name="sell_price" value="3000"> 
+                                    <input type="text" name="amount" value="1" size="3" onchange="change();" autofocus>
+                                    <input type="button" value=" + " onclick="add();">
+                                    <input type="button" value=" - " onclick="del();"><br>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" id="divName">
+                        <label for="inputName" class="col-lg-2 control-label"><strong>고객명</strong></label>
+                        <label for="inputPrice" class="col-lg-2 control-label"><strong>결제금액</strong></label>
+                        <div class="col-lg-3">
+                            <input type="text" class="form-control onlyHangul" id="name" data-rule-required="true" placeholder="only 한글" maxlength="15">
+                            <input type="text" name="sum" size="11" readonly>원
+                        </div>
+                    </div>
+                    
+                </form>
+                     <div class="form-group" id="divName">
+                        <label for="inputPrice" class="col-lg-2 control-label"><strong>결제금액</strong></label>
+                        <label for="inputName" class="col-lg-2 control-label"><strong>고객명</strong></label>
+                        <div class="col-lg-3">
+                            <input type="text" class="form-control onlyHangul" id="name" data-rule-required="true" placeholder="only 숫자" maxlength="15">
+                            <input type="text" class="form-control onlyHangul" id="name" data-rule-required="true" placeholder="이름을 입력해주세요" maxlength="15">
+                        </div>
+                    </div>
