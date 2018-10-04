@@ -111,7 +111,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-black bg-black fixed-top" style="background-color: black">
         <div class="container">
-            <img src="han.png" width="60" height="60"> 
+            <img src="han.png" width="60" height="60"> &nbsp; &nbsp;
             <a class="navbar-brand text-white"><strong>신용카드 결제 서비스</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -123,7 +123,6 @@
                     </li>
                 </ul>
             </div>
-        </div>
     </nav>
     <!-- Page Content -->
     <div class="container">
@@ -133,15 +132,15 @@
         <br>
         <div class="page-header">
             <h1 class = "display-4">Order Information</h1>
-        </div>
+    </div>
         <br>
-        <tr align="center">
+        <tr align='center'>
             <td>
-                <table class="table table-striped" width="538" bgcolor="#DBDBDB" border="1" cellspacing="1" cellpadding="0">
+                <table class="table table-striped" width='538' bgcolor='#DBDBDB' border='1' cellspacing='1' cellpadding='0'>
                     <div class="center-block" id="divId">
                         <label for="inputId" class="col-lg-2 control-label" ><strong>상품명</strong></label>
                         <div class="col-lg-3">
-                            <input type="text" class="form-control onlyAlphabetAndNumber" id="id" data-rule-required="true" maxlength="30" placeholder="라면" value="라면">
+                            <input type="text" class="form-control onlyAlphabetAndNumber" id="menuName" data-rule-required="true" maxlength="30" placeholder="라면" value="라면">
                         </div>
                     </div>
                     <br>
@@ -149,73 +148,62 @@
                     
                     <div class="form-group" id="divPassword">
                         <form name="form" method="get">
-                            <label for="inputPassword" class="col-lg-2 control-label"><strong>수량</strong></label>
+<!--                             <label for="inputPassword" class="col-lg-2 control-label"><strong>수량</strong></label>
                                 <div class="col-lg-3">
-                            <!-- <select class="form-control" width="100" name='food' onChange='num(value)' autofocus>
-                                    <option value='1' selected>1</option>
-                                    <option value='2'>2</option>
-                                    <option value='3'>3</option>
-                                    <option value='4'>4</option>
-                                    <option value='4'>5</option>
-                                    <option value='4'>6</option>    
-                                    <option value='4'>7</option>
-                                    <option value='4'>8</option>
-                            </select> -->
-
-                                    <input type="hidden" name="sell_price" value="3000"> 
+                                    <input type=hidden name="sell_price" value="3000"> 
                                     <input type="text" name="amount" value="1" size="3" onchange="change();" autofocus>
                                     <input type="button" value=" + " onclick="add();">
                                     <input type="button" value=" - " onclick="del();"><br>
-                              </div>
-                          </form>
+                        </div> -->
                     </div>
                     
                     <div class="form-group" id="divName">
                         <label for="inputPrice" class="col-lg-2 control-label"><strong>결제금액</strong></label>
                         <div class="col-lg-3">
-                            <input type="text" name="sum" size="11" readonly>원
+                          <input type="text" name="sum" size="11" value="3000">원
+<!--                             <input type="text" name="sum" size="11" readonly>원 -->
                         </div>
                     </div>
-                
+                </form>
 
 
-                    <div class="form-group">
+                    <div class="form-group" id="divName">
                         <label for="inputName" class="col-lg-2 control-label"><strong>고객명</strong></label>
                         <div class="col-lg-3">
-                            <input type="text" class="form-control onlyHangul" id="name" data-rule-required="true" placeholder="이름을 입력해주세요" maxlength="15">
+                            <input type="text" class="form-control onlyHangul" id="userName" data-rule-required="true" placeholder="이름을 입력해주세요" maxlength="15">
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group" id="divName">
                         <label for="inputCard" class="col-lg-2 control-label"><strong>신용카드</strong></label>
                             <div class="col-lg-3">
                                 <!-- <select class="form-control" width="100" name='food' onChange='num(value)'> -->
-                                <select class="form-control" width="100" name="card">
+                                <select class="form-control" width="100" name='card'>
                                     
-                                    <option value="1" selected>카드선택</option>
-                                    <option value="01">BC카드</option>
-                                    <option value="02">국민카드</option>
-                                    <option value="KA">카카오뱅크</option>
-                                    <option value="03">하나(구.외환)카드</option>
-                                    <option value="04">삼성카드</option>
+                                    <option value='1' selected>카드선택</option>
+                                    <option value='01'>BC카드</option>
+                                    <option value='02'>국민카드</option>
+                                    <option value='KA'>카카오뱅크</option>
+                                    <option value='03'>하나(구.외환)카드</option>
+                                    <option value='04'>삼성카드</option>
             
-                                    <option value="08">현대카드</option>
+                                    <option value='08'>현대카드</option>
             
-                                    <option value="09">롯데카드</option>
-                                    <option value="11">씨티카드</option>
-                                    <option value="12">수협카드</option>    
-                                    <option value="15">농협카드</option>
-                                    <option value="24">하나(구.하나SK)카드</option>
+                                    <option value='09'>롯데카드</option>
+                                    <option value='11'>씨티카드</option>
+                                    <option value='12'>수협카드</option>    
+                                    <option value='15'>농협카드</option>
+                                    <option value='24'>하나(구.하나SK)카드</option>
             
-                                    <option value="10">신한카드</option>
-                                    <option value="17">광주카드</option>
-                                    <option value="18">전북카드</option>
-                                    <option value="16">제주카드</option>
+                                    <option value='10'>신한카드</option>
+                                    <option value='17'>광주카드</option>
+                                    <option value='18'>전북카드</option>
+                                    <option value='16'>제주카드</option>
                                 </select>
                             </div><!-- /btn-group -->
                     </div><!-- /form-group -->
 
-                    <div class="form-group">
+                    <div class="form-group" id="divName">
                         <label for="inputCardNumber" class="col-lg-2 control-label"><strong>카드번호</strong></label>
                         <div class="col-lg-10">
                             <input type="text" name="txtCard1" id="txtCard1" size="5" height="2"  maxlength="4" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event), nextBlank(4, this.id, 'txtCard2')" style="ime-mode:disabled;"> -
@@ -233,8 +221,9 @@
                   <button type="submit" class="btn btn-secondary" onclick="history.back()">취소하기&nbsp;<i class="fa fa-times spaceLeft"></i></button>
             <!-- <button type="button" class="btn btn-primary" id="btnPurchase" onClick="location.href='receipt.html'" />결재하기</button> -->
                     &nbsp;&nbsp;
-                    <button type="submit" class="btn btn-primary" onclick="location='https://dbsxjf2.github.io/food/reciept'">결제하기&nbsp;<i class="fa fa-check spaceLeft"></i></button>
-            </div>
+                    <button id="btnPurchase" type="submit" class="btn btn-primary" onclick="location='reciept.html'">결제하기&nbsp;<i class="fa fa-check spaceLeft"></i></button>
+<!--               <button id="btnPurchase" type="submit" class="btn btn-primary">결제하기&nbsp;<i class="fa fa-check spaceLeft"></i></button> -->
+                </div>
                     
         <!-- </form> -->
     </div>
