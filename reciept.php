@@ -80,6 +80,9 @@
 --------------------------------------------<br>
 주문정보를 확인하려면<a href="https://dbsxjf2.github.io/food/gumae.html">&nbsp;여기 </a>를 눌러주세요!
      
+<?php
+echo $_POST['id'].','.$_POST['amount'];
+?> 
 
 
       
