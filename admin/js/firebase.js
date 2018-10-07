@@ -9,6 +9,7 @@
        console.log("id: " + data.val().id);
        console.log("userName: " + data.val().userName);
        console.log("menuName: " + data.val().menuName);
+       console.log("count: "+data.val().amount);
 
        var htmlString = "";
 
@@ -17,6 +18,7 @@
        htmlString += '<td>'+data.val().id+'</td>';
        htmlString += '<td>'+data.val().userName+'</td>';
        htmlString += '<td>'+data.val().menuName+'</td>';
+       htmlString += '<td>'+data.val().amount+'</td>';
        htmlString += '</tr>';
    
        $("#js-table").append(htmlString);
