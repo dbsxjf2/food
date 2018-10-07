@@ -10,7 +10,7 @@
           id: id,
           userName: userName,
           menuName : menuName,
-          amount: amount
+          amount: amount,
         });
     }
 
