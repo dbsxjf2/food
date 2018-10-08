@@ -37,7 +37,18 @@
         };
         firebase.initializeApp(config);
     </script>
-
+<script>
+    function fncSubmit()
+{
+    var name = document.m.menuName.value;
+    var amount = document.form.amount.value;
+    var price = document.form.sum.value;
+    var go = document.name.userName.value;
+    location.href = "test4.html?name="+name+"&amount="+amount+"&sum="+price+"&userName="+go;
+}
+</script>
+    
+    
     <script language="javascript" type="text/javascript">
 
         function onlyNumber(event){
@@ -134,15 +145,20 @@
             <h1 class = "display-4">결제 페이지</h1>
     </div>
         <br>
+
+    <form name="m">
+
         <tr align='center'>
             <td>
                 <table class="table table-striped" width='538' bgcolor='#DBDBDB' border='1' cellspacing='1' cellpadding='0'>
                     <div class="center-block" id="divId">
                         <label for="inputId" class="col-lg-2 control-label" ><strong>상품명</strong></label>
                         <div class="col-lg-3">
-                            <input type="text" class="form-control onlyAlphabetAndNumber" id="menuName" data-rule-required="true" maxlength="30" placeholder="냉면" value="냉면">
+                            <input type="text" class="form-control onlyAlphabetAndNumber" name="menuName" data-rule-required="true" maxlength="30" placeholder="냉면" value="냉면">
                         </div>
                     </div>
+
+                </form>
                     <br>
 
                     
@@ -150,29 +166,33 @@
                         <form name="form" method="get">
                             <label for="inputPassword" class="col-lg-2 control-label"><strong>수량</strong></label>
                                 <div class="col-lg-3">
-                                    <input type=hidden name="sell_price" value="4500"> 
-                                    <input type="text" id="amount" value="1" size="3" onchange="change();" autofocus>
+                                    <input type=hidden name="sell_price" value="4000"> 
+                                    <input type="text" name="amount" value="1" size="3" onchange="change();" autofocus>
                                     <input type="button" value=" + " onclick="add();">
                                     <input type="button" value=" - " onclick="del();"><br>
                             </div>
                     </div>
                     
+
+                    
                     <div class="form-group" id="divName">
                         <label for="inputPrice" class="col-lg-2 control-label"><strong>결제금액</strong></label>
                         <div class="col-lg-3">
-                          <input type="text" name="sum" size="11" value="4500">원
+                          <input type="text" name="sum" size="11" value="4000">원
 <!--                             <input type="text" name="sum" size="11" readonly>원 -->
                         </div>
                     </div>
                 </form>
 
-
+               <form name = "name">
                     <div class="form-group" id="divName">
                         <label for="inputName" class="col-lg-2 control-label"><strong>고객명</strong></label>
                         <div class="col-lg-3">
-                            <input type="text" class="form-control onlyHangul" id="userName" data-rule-required="true" placeholder="이름을 입력해주세요" maxlength="15">
+                            <input type="text" class="form-control onlyHangul" name="userName" data-rule-required="true" placeholder="이름을 입력해주세요" maxlength="15">
                         </div>
                     </div>
+                        
+                </form>
 
                     <div class="form-group" id="divName">
                         <label for="inputCard" class="col-lg-2 control-label"><strong>신용카드</strong></label>
@@ -216,15 +236,16 @@
 
                   
         <br>
-        <!-- <form style="display: hidden" action="lovely-dream.glitch.me/" method="POST" id="form"> -->
+                    
+    
             <div class="form-group text-center">
                   <button type="submit" class="btn btn-secondary" onclick="history.back()">취소하기&nbsp;<i class="fa fa-times spaceLeft"></i></button>
-            <!-- <button type="button" class="btn btn-primary" id="btnPurchase" onClick="location.href='receipt.html'" />결재하기</button> -->
+         
                     &nbsp;&nbsp;
-                    <button id="btnPurchase" type="submit" class="btn btn-primary" onclick="location='reciept.html'">결제하기&nbsp;<i class="fa fa-check spaceLeft"></i></button>
-<!--               <button id="btnPurchase" type="submit" class="btn btn-primary">결제하기&nbsp;<i class="fa fa-check spaceLeft"></i></button> -->
+                    <button id="btnPurchase" type="button" class="btn btn-primary" onclick='javascript:fncSubmit();'>결제하기&nbsp;<i class="fa fa-check spaceLeft"></i></button>
+<!--            
                 </div>
-                    
+                        </form>
         <!-- </form> -->
     </div>
     <!-- /.container -->
