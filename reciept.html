@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+
+
+
+
+
+
+  <head>
+
+        <script>
+
+                var Request = function()
+                {
+                    this.getParameter = function( name )
+                    {
+                        var rtnval = '';
+                        var nowAddress = unescape(location.href);
+                        var parameters = (nowAddress.slice(nowAddress.indexOf('?')+1,nowAddress.length)).split('&');
+                        for(var i = 0 ; i < parameters.length ; i++)
+                        {
+                            var varName = parameters[i].split('=')[0];
+                            if(varName.toUpperCase() == name.toUpperCase())
+                            {
+                                rtnval = parameters[i].split('=')[1];
+                                break;
+                            }
+                        }
+                //        return rtnval;
+                        document.write( rtnval );
+                    }
+                }
+                var request = new Request();
+
+
+</script>
+
+
+    <meta charset="utf-8">
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+    <meta name="description" content="">
+
+
+
+    <meta name="author" content="">
+
+
+
+
+
+
+
+    <title>영수증</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+
+
+
+        crossorigin="anonymous">
+
+
+
+
+
+
+
+    <!-- Custom styles for this template -->
+
+
+
+    <link href="style.css" rel="stylesheet">
+
+  
+
+     
+
+
+
+
+  </head>
+
+
+
+
+
+
+
+  <body>
+
+
+
+
+
+
+
+    <div style="text-align:center">
+
+
+
+    <h2>한신푸드파이터</h2>
+
+
+
+   <b>신용카드 결재</b><br><br>
+
+
+
+      
+
+
+
+      영수증은 환불, 반품을 원하실 때<br>
+
+
+
+      꼭 필요합니다.<br>
+
+
+
+      
+
+
+
+--------------------------------------------<br>
+
+
+
+      <p><span style="color: red; font-weight: bold;">주문번호</span></p>
+
+
+
+            <script type="text/javascript" font size="30">
+
+
+
+
+
+
+
+  var result = Math.floor(Math.random() * 10000) + 1;
+
+
+
+  document.write("A-"+result);
+
+ 
+
+
+
+  
+
+  
+
+  
+
+
+
+</script><br>
+
+
+
+              
+
+
+
+--------------------------------------------<br>
+
+<form name='frm'>
+   상품명 :  <script>request.getParameter('name');</script><br>
+   수량 : &nbsp; <script>request.getParameter('amount');</script><br>
+   총금액 : <script>request.getParameter('sum'); </script><br>
+
+
+        </form>
+        ---------------------------------------------<br>
+        <script>request.getParameter('userName');</script>님~ 구입해주셔서 감사합니다.<br>
+
+
+
+      
+
+
+
+</div>
+
+
+
+    
+    <!-- Bootstrap core JavaScript -->
+
+
+
+    <!-- <script src="vendor/jquery/jquery.min.js"></script>
+
+
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+
+
+
+
+
+
+
+  </body>
+
+
+
+
+
+
+
+</html>
