@@ -142,32 +142,14 @@
 
 <form name='frm'>
    
-   상품명 :  <script>
- 
-    var filter = "win16|win32|win64|mac";
- 
-    if( navigator.platform  ){
-        if( filter.indexOf(navigator.platform.toLowerCase())<0 ){
-             request.getParameter('name');
-        }else{
-           request.getParameter('name');
-        }
-    }
-
-
-
-  
-   
-  
-  </script><br>
+   상품명 :  <script>  request.getParameter('name')'; </script><br>
 
    수량 : &nbsp; <script>request.getParameter('amount');</script><br>
 
    총금액 : <script>request.getParameter('sum'); </script><br>
 
         </form>
-
-        ---------------------------------------------<br>
+ ---------------------------------------------<br>
 
         <script>request.getParameter('userName');</script>님~ 구입해주셔서 감사합니다.<br>
 
