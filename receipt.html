@@ -144,7 +144,20 @@
    
    상품명 :  <script>
  
-    request.getParameter('name');
+    var filter = "win16|win32|win64|mac";
+ 
+    if( navigator.platform  ){
+        if( filter.indexOf(navigator.platform.toLowerCase())<0 ){
+             request.getParameter('name');
+        }else{
+           request.getParameter('name');
+        }
+    }
+
+
+
+  
+   
   
   </script><br>
 
