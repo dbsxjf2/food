@@ -50,6 +50,7 @@
     function fncSubmit()
 {
     var name = document.m.menuName.value;
+    name = encodeURI(name,"euc-kr");
     var amount = document.form.amount.value;
     var price = document.form.sum.value;
     var go = document.name.userName.value;
