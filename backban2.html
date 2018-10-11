@@ -50,11 +50,13 @@
     function fncSubmit()
 {
     var name = document.m.menuName.value;
-    name = encodeURI(name,"utf-8");
+    
     var amount = document.form.amount.value;
     var price = document.form.sum.value;
     var go = document.name.userName.value;
-    location.href = "https://dbsxjf2.github.io/food/receipt.html?name="+name+"&amount="+amount+"&sum="+price+"&userName="+go;
+    location.href = "https://dbsxjf2.github.io/food/receipt.html?name="+encodeURI(encodeURIComponent(name))
+
+ +"&amount="+amount+"&sum="+price+"&userName="+go;
 }
 </script>
     
