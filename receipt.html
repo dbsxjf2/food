@@ -141,8 +141,12 @@
 
 
 <form name='frm'>
-
-   상품명 :  <script>request.getParameter('name');</script><br>
+   
+   상품명 :  <script>
+  name = encodeURI(name,"euc-kr");
+  request.getParameter('name');
+  
+  </script><br>
 
    수량 : &nbsp; <script>request.getParameter('amount');</script><br>
 
