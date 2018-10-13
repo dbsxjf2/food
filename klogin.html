@@ -23,6 +23,9 @@
    Kakao.Auth.createLoginButton({
      container: '#kakao-login-btn',
      success: function(authObj) {
+      alert(res.properties.nickname+"님 환영합니다.");
+      location.href=""+res.properties.nicknaem;
+      
     alert(JSON.stringify(authObj));
      },
      fail: function(err) {
