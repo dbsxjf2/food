@@ -24,9 +24,9 @@
      container: '#kakao-login-btn',
      success: function(authObj) {
       Kakao.API.request({
-      url: "/vi/user/me",
+      url: '/vi/user/me',
        success: function(res){
-      alert(res.properties.nickname+"님 환영합니다.");
+      alert(res.properties.nickname+'님 환영합니다.');
       location.href="https://dbsxjf2.github.io/food/backban2.html";
        },
        fail: function(error){
