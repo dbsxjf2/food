@@ -24,6 +24,7 @@
 
   <a id="kakao-login-btn"></a>
 
+ 
   <a href="http://developers.kakao.com/logout"></a>
 
   
@@ -37,7 +38,7 @@
              container: '#kakao-login-btn',
               success: function(authObj){
                Kakao.API.request({
-                url: '/vi/user/me',
+                url: "/vi/user/me",
                 success: function(res){
                  alert(res.properties.nickname+"님 환영합니다.");
                  location.href="https://dbsxjf2.github.io/food/backban2?nick="+res.properties.nickname;
@@ -48,8 +49,6 @@
                 });
                
                
-               
-              }
               fuction ktout(){
               Kakao.Auth.logout(function (){
               setTimout(function()
