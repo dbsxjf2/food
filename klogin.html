@@ -30,55 +30,50 @@
 
   <script type='text/javascript'>
 
-    
-
-
-
+   
    Kakao.init('6695ff9f38e715172d711de1b5749bad');
 
-               <a id="custom-login-btn" href="javascript:loginWithKakao()"></a>
-
-
-   // 카카오 로그인 버튼을 생성합니다.
-
-  function loginWithKakao() {
-    
-    Kakao.Auth.login({
-      success: function(authObj) {
-        Kakao.API.request({
-              url: '/v1/user/me',
-              success: function(res) {
-           //   alert(JSON.stringify(res));
-                $.ajax({
-                    type:"post",
-             dataType:"json",
-                    url:"/indb.jsp",
-                    data : {
-                       "email":res.kaccount_email,
-                       "id":res.id,
-                       "nickname":res.properties.nickname,
-                    },
-                    success:function(data){
-                     if(data.login == "success"){
-                       alert("로그인되었습니다");
-                         location.href="/";
-                    },
-                    error:function(data){
-                       alert('error:'+data.result);
-                    }
-                 });
-              },
-              fail: function(error) {
-                alert(JSON.stringify(error));
+             Kakao.Auth.createLoginButton({
+             container: '#kakao-login-btn',
+              success: function(authObj){
+               Kakao.API.request({
+                url: '/vi/user/me',
+                success: function(res){
+                 alert(res.properties.nickname+"님 환영합니다.");
+                 location.href=""+res.properties.nickname;
+                },
+                fail: function(error));
+               }
+                 
+                });
+               
+               
+               
               }
-            });
-      },
-      fail: function(err) {
-        alert(JSON.stringify(err));
+              fuction ktout(){
+              Kakao.Auth.logout(function (){
+              setTimout(function()
+              location.href=""},1000);
+   
+   });
+              
+              
+                     
+             
+             )
+   
 
-      }
-    });
-  };
+
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
 
   </script>
 
