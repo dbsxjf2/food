@@ -1,32 +1,14 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
-    <meta charset="utf-8">
+   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+   
+ 
     <title>결제하기</title>
 
     <!-- Bootstrap core CSS -->
@@ -56,7 +38,23 @@
         };
         firebase.initializeApp(config);
     </script>
+   <!--
+<script>
+   
+    function fncSubmit()
+{
+    var name = document.m.menuName.value;
+    
+    var amount = document.form.amount.value;
+    var price = document.form.sum.value;
+    var go = document.name.userName.value;
+    location.href = "https://dbsxjf2.github.io/food/receipt.html?name="+encodeURI(encodeURIComponent(name))
 
+ +"&amount="+amount+"&sum="+price+"&userName="+encodeURI(encodeURIComponent(go));
+}
+</script>
+    
+    -->
     <script language="javascript" type="text/javascript">
 
         function onlyNumber(event){
@@ -77,27 +75,6 @@
         }
     </script>
 
-    <script>
-   
-    function fncSubmit()
-{
-    var name = document.m.menuName.value;
-    
-    var amount = document.form.amount.value;
-    var price = document.form.sum.value;
-    var go = document.name.userName.value;
-    location.href = "https://dbsxjf2.github.io/food/receipt.html?name="+encodeURI(encodeURIComponent(name))
-
- +"&amount="+amount+"&sum="+price+"&userName="+encodeURI(encodeURIComponent(go));
-}
-</script>
-    
-    
-    
-    
-    
-    
-    
     <script>
     function nextBlank(N, Obj, nextID) {
         if(document.getElementById(Obj).value.length == N) {
@@ -174,17 +151,20 @@
             <h1 class = "display-4">결제 페이지</h1>
     </div>
         <br>
-        <form name="m">
+
+    <form name="m">
+
         <tr align='center'>
             <td>
                 <table class="table table-striped" width='538' bgcolor='#DBDBDB' border='1' cellspacing='1' cellpadding='0'>
                     <div class="center-block" id="divId">
                         <label for="inputId" class="col-lg-2 control-label" ><strong>상품명</strong></label>
                         <div class="col-lg-3">
-                            <input type="text" class="form-control onlyAlphabetAndNumber" id="menuName" name="menuName" data-rule-required="true" maxlength="30" placeholder="백반" value="백반">
+                            <input type="text" class="form-control onlyAlphabetAndNumber" name="menuName" data-rule-required="true" maxlength="30" placeholder="백반" value="백반">
                         </div>
                     </div>
-                    </form>
+
+                </form>
                     <br>
 
                     
@@ -193,11 +173,13 @@
                             <label for="inputPassword" class="col-lg-2 control-label"><strong>수량</strong></label>
                                 <div class="col-lg-3">
                                     <input type=hidden name="sell_price" value="5000"> 
-                                    <input type="text" id="amount" value="1" size="3" onchange="change();" autofocus>
+                                    <input type="text" name="amount" value="1" size="3" onchange="change();" autofocus>
                                     <input type="button" value=" + " onclick="add();">
                                     <input type="button" value=" - " onclick="del();"><br>
                             </div>
                     </div>
+                    
+
                     
                     <div class="form-group" id="divName">
                         <label for="inputPrice" class="col-lg-2 control-label"><strong>결제금액</strong></label>
@@ -208,14 +190,16 @@
                     </div>
                 </form>
 
-                 <form name = "name">
+               <form name = "name">
                     <div class="form-group" id="divName">
                         <label for="inputName" class="col-lg-2 control-label"><strong>고객명</strong></label>
                         <div class="col-lg-3">
-                            <input type="text" class="form-control onlyHangul" id="userName" data-rule-required="true" placeholder="이름을 입력해주세요" maxlength="15">
+                            <input type="text" class="form-control onlyHangul" name="userName" data-rule-required="true" placeholder="이름을 입력해주세요" maxlength="15">
                         </div>
                     </div>
-                    </form>
+                        
+                </form>
+
                     <div class="form-group" id="divName">
                         <label for="inputCard" class="col-lg-2 control-label"><strong>신용카드</strong></label>
                             <div class="col-lg-3">
@@ -230,16 +214,14 @@
                                     <option value='04'>삼성카드</option>
             
                                     <option value='08'>현대카드</option>
-            
-                                    <option value='09'>롯데카드</option>
+                                                <option value='09'>롯데카드</option>
                                     <option value='11'>씨티카드</option>
                                     <option value='12'>수협카드</option>    
                                     <option value='15'>농협카드</option>
                                     <option value='24'>하나(구.하나SK)카드</option>
             
                                     <option value='10'>신한카드</option>
-                                    <option value='17'>광주카드</option>
-                                    <option value='18'>전북카드</option>
+                                    <option value='17'>광주카드</option>                                    <option value='18'>전북카드</option>
                                     <option value='16'>제주카드</option>
                                 </select>
                             </div><!-- /btn-group -->
@@ -258,15 +240,21 @@
 
                   
         <br>
-        <!-- <form style="display: hidden" action="lovely-dream.glitch.me/" method="POST" id="form"> -->
+                     <!--"onsubmit="javascript:fncSubmit();"-->
+               <!--https://dbsxjf2.github.io/food/receipt.html-->
+   <!-- <form action="receipt.html" method="get">-->
             <div class="form-group text-center">
                   <button type="submit" class="btn btn-secondary" onclick="history.back()">취소하기&nbsp;<i class="fa fa-times spaceLeft"></i></button>
-            <!-- <button type="button" class="btn btn-primary" id="btnPurchase" onClick="location.href='receipt.html'" />결재하기</button> -->
+           
                     &nbsp;&nbsp;
-                    <button id="btnPurchase" class="btn btn-primary" onclick='javascript:fncSubmit();'>결제하기&nbsp;<i class="fa fa-check spaceLeft"></i></button>
-<!--               <button id="btnPurchase" type="submit" class="btn btn-primary">결제하기&nbsp;<i class="fa fa-check spaceLeft"></i></button> -->
-                </div>
                     
+               
+ <button id="btnPurchase" type="submit" class="btn btn-primary" onclick="location='receipt.html'">결제하기&nbsp;<i class="fa fa-check spaceLeft"></i></button>
+              <!-- </form> -->
+ <!--onclick='javascript:fncSubmit();-->
+               <!--            
+                </div>
+                        </form>
         <!-- </form> -->
     </div>
     <!-- /.container -->
@@ -286,7 +274,6 @@
 
 </body>
 </html>
-
        
        
         
