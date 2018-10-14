@@ -59,6 +59,27 @@
     </script>
 
     <script>
+   
+    function fncSubmit()
+{
+    var name = document.m.menuName.value;
+    
+    var amount = document.form.amount.value;
+    var price = document.form.sum.value;
+    var go = document.name.userName.value;
+    location.href = "https://dbsxjf2.github.io/food/receipt.html?name="+encodeURI(encodeURIComponent(name))
+
+ +"&amount="+amount+"&sum="+price+"&userName="+encodeURI(encodeURIComponent(go));
+}
+</script>
+    
+    
+    
+    
+    
+    
+    
+    <script>
     function nextBlank(N, Obj, nextID) {
         if(document.getElementById(Obj).value.length == N) {
             document.getElementById(nextID).focus();
