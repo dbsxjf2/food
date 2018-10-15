@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
 
+  
     <meta charset="utf-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <meta name="description" content="">
+
     <meta name="author" content="">
+
 
     <title>결제하기</title>
 
@@ -19,22 +25,34 @@
     <link href="style.css" rel="stylesheet">
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+
 
 
     <script>
         // Initialize Firebase
-        var config = {  
+       var config = {  
+
             apiKey: "AIzaSyB6sVlL035ChFfWnkXe0zP_mwo7ACiFcwo",
+
             authDomain: "hs-food-fighter.firebaseapp.com",
+
             databaseURL: "https://hs-food-fighter.firebaseio.com",
+
             projectId: "hs-food-fighter",
+
             storageBucket: "hs-food-fighter.appspot.com",
+
             messagingSenderId: "577796515280"
+
         };
+
         firebase.initializeApp(config);
     </script>
     <!--
@@ -56,21 +74,37 @@
     
     <script language="javascript" type="text/javascript">
         function onlyNumber(event){
+
             event = event || window.event;
+
             var keyID = (event.which) ? event.which : event.keyCode;
+
             if ( (keyID >= 48 && keyID <= 57) || (keyID >= 96 && keyID <= 105) || keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39 ) 
+
                 return;
+
             else
+
                 return false;
+
         }
+
         function removeChar(event) {
+
             event = event || window.event;
+
             var keyID = (event.which) ? event.which : event.keyCode;
+
             if ( keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39 ) 
+
                 return;
+
             else
+
                 event.target.value = event.target.value.replace(/[^0-9]/g, "");
+
         }
+
     </script>
 
     <script>
