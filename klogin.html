@@ -23,6 +23,7 @@
           url: '/v2/user/me',
           success: function(res) {
             alert(JSON.stringify(res));
+            alert(res.properties.nickname+'님 환영합니다.');
             location.href="https://dbsxjf2.github.io/food/backban2.html";
           },
           fail: function(error) {
