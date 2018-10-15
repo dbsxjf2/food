@@ -55,8 +55,9 @@
 
         firebase.initializeApp(config);
     </script>
-    
+    <!--
 <script>
+ 
     function fncSubmit()
 {
     var name = document.m.menuName.value;
@@ -69,7 +70,7 @@
 }
 </script>
 
-
+-->
 
     
     <script language="javascript" type="text/javascript">
@@ -262,7 +263,7 @@
 
                         <div class="col-lg-3">
 
-                            <input type="text" class="form-control onlyAlphabetAndNumber" id="menuName" name="menuName" data-rule-required="true" maxlength="30" placeholder="백반" value="">
+                            <input type="text" class="form-control onlyAlphabetAndNumber" id="menuName" name="menuName" data-rule-required="true" maxlength="30" placeholder="백반" value="백반">
 
                         </div>
 
@@ -416,7 +417,7 @@
                   <button type="submit" class="btn btn-secondary" onclick="history.back()">취소하기&nbsp;<i class="fa fa-times spaceLeft"></i></button>
          
                     &nbsp;&nbsp;
-                    <button id="btnPurchase" type="button" class="btn btn-primary" onclick='javascript:fncSubmit();'>결제하기&nbsp;<i class="fa fa-check spaceLeft"></i></button>
+                    <button id="btnPurchase" type="button" class="btn btn-primary" onclick="location='receipt.html'">결제하기&nbsp;<i class="fa fa-check spaceLeft"></i></button>
 <!--            
                 </div>
                         </form>
