@@ -441,7 +441,7 @@
 
                             <input type="hidden" class="form-control onlyHangul" id="userName" data-rule-required="true" maxlength="15">
                             <script>
-				    document.getElementById('userName').value = request.getParameter('na');
+				    document.getElementById('userName').value = encodeURI(encodeURIComponent(request.getParameter('na')));
 				</script>
 			  
                         </div>
