@@ -439,10 +439,9 @@
                         <div class="col-lg-3">
 
                             <input type="text" class="form-control onlyHangul" id="userName" data-rule-required="true" maxlength="15">
-                              <script type="text/javascript">
-                               var a = document.getElementById("userName");
-                              a.value =  request.getParameter('na');
-                         </script>
+                            <script>
+				    document.getElementById('userName').value = request.getParameter('na');
+				</script>
 			  
                         </div>
 
