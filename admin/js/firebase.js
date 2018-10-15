@@ -15,7 +15,6 @@
 
        htmlString += '<tr>';
        htmlString += '<td>'+data.val().date+'</td>';
-       htmlString += '<td>'+data.val().id+'</td>';
        htmlString += '<td>'+data.val().userName+'</td>';
        htmlString += '<td>'+data.val().menuName+'</td>';
        htmlString += '<td>'+data.val().amount+'</td>';
