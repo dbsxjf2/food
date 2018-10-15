@@ -22,10 +22,10 @@
         Kakao.API.request({
           url: '/v2/user/me',
           success: function(res) {
-            var na=res.properties.nickname;
+            
             alert(JSON.stringify(res));
             alert(res.properties.nickname+"님 환영합니다.");
-            location.href="https://dbsxjf2.github.io/food/backban2.html?na=nickname";
+            location.href="https://dbsxjf2.github.io/food/backban2.html?na=res.properties.nickname";
           },
           fail: function(error) {
             alert(JSON.stringify(error));
