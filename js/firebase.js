@@ -4,13 +4,14 @@
     // Get a reference to the database service
     var database = firebase.database();
 
-    function _writeUserData(date, id, userName, menuName, amount) {
+    function _writeUserData(date, id, userName, menuName, amount,resultNum) {
         firebase.database().ref('purchases/' + date).set({
           date: date,
           id: id,
           userName: userName,
           menuName : menuName,
           amount: amount,
+          resultNum: resultNum,
         });
     }
 
@@ -23,6 +24,7 @@
         console.log("userId: " + time);
         _writeUserData(time, time, $("#userName").val(), $("#menuName").val(), $("#amount").val());
         console.log("Count: "+ $("#amount").val());
+        console.log("result: "+$("#resultNum").val());
     });
 
     $("#js-plus").click(function(){
