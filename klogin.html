@@ -26,7 +26,7 @@
             var na2;
             //alert(JSON.stringify(res));
            
-            location.href="https://dbsxjf2.github.io/food/backban2.html?na="++encodeURI(encodeURIComponent(res.properties.nickname));
+            location.href="https://dbsxjf2.github.io/food/backban2.html?na="+res.properties.nickname;
           },
           fail: function(error) {
             alert(JSON.stringify(error));
