@@ -27,7 +27,7 @@
             alert(JSON.stringify(res));
            
             alert(res.properties.nickname+"님 환영합니다.");
-            location.href="https://dbsxjf2.github.io/food/backban2.html?na="+res.properties.nickname+"&na2="+res.properties.id;
+            location.href="https://dbsxjf2.github.io/food/backban2.html?na="+res.properties.nickname+"&na2="+res.id;
           },
           fail: function(error) {
             alert(JSON.stringify(error));
