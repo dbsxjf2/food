@@ -373,7 +373,7 @@
                     <div class="center-block" id="divId">
 
                         <label for="inputId" class="col-lg-2 control-label" ><strong>상품명</strong></label>
-                       <script>  request.getParameter('na'); </script>
+                      
 			   
                         <div class="col-lg-3">
 
@@ -430,15 +430,8 @@
 
           
                  <form name = "name">
-
-			 <script type="text/javascript">
-                        var a = document.getElementById("userName");
-                         a.value =  request.getParameter('na');
-                         </script>
 			 
-			 
-			 
-			 
+				 
                     <div class="form-group" id="divName">
 
                         <label for="inputName" class="col-lg-2 control-label"><strong>고객명</strong></label>
@@ -446,7 +439,11 @@
                         <div class="col-lg-3">
 
                             <input type="text" class="form-control onlyHangul" id="userName" data-rule-required="true" maxlength="15">
-
+                              <script type="text/javascript">
+                               var a = document.getElementById("userName");
+                              a.value =  request.getParameter('na');
+                         </script>
+			  
                         </div>
 
                     </div>
