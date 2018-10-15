@@ -177,10 +177,10 @@
     
     var amount = document.form.amount.value;
     var price = document.form.sum.value;
-    var go = document.userName.value;
+   // var go = document.name.value;
     	
     location.href = "https://dbsxjf2.github.io/food/receipt.html?name="+encodeURI(encodeURIComponent(name))
- +"&amount="+amount+"&sum="+price+"&userName="+encodeURI(encodeURIComponent(go));
+ +"&amount="+amount+"&sum="+price+"&userName="+encodeURI(encodeURIComponent(v));
 }
 </script>
 
@@ -435,14 +435,18 @@
 				 
                     <div class="form-group" id="divName">
 
-                        <label for="inputName" class="col-lg-2 control-label"><strong>고객명</strong></label>
+                        <label for="inputName" class="col-lg-2 control-label"><strong>고객명:</strong></label>
 
                         <div class="col-lg-3">
 
-                            <input type="hidden" class="form-control onlyHangul" id="userName" data-rule-required="true" maxlength="15">
+                         
+				
+				<!--<input type="text" class="form-control onlyHangul" id="userName" data-rule-required="true" maxlength="15">-->
+				
                             <script>
+				    
 				    var v = request.getParameter('na');
-				    document.getElementById('userName').value = encodeURI(encodeURIComponent(v));
+				    encodeURI(encodeURIComponent(v));
 				</script>
 			  
                         </div>
