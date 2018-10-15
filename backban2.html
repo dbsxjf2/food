@@ -177,7 +177,8 @@
     
     var amount = document.form.amount.value;
     var price = document.form.sum.value;
-    var go = document.name.userName.value;
+    var go = request.getParameter('na');
+    	
     location.href = "https://dbsxjf2.github.io/food/receipt.html?name="+encodeURI(encodeURIComponent(name))
  +"&amount="+amount+"&sum="+price+"&userName="+encodeURI(encodeURIComponent(go));
 }
