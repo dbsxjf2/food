@@ -6,7 +6,6 @@
 
     database.on('child_added', function (data) {
        console.log("date: " + data.val().date);
-       console.log("id: " + data.val().id);
        console.log("userName: " + data.val().userName);
        console.log("menuName: " + data.val().menuName);
        console.log("count: "+data.val().amount);
